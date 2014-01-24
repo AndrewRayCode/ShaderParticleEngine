@@ -485,7 +485,7 @@ ShaderParticleGroup.shaders = {
                 'vec4 pos = GetPos();',
 
                 'if( angleAlignVelocity == 1.0 ) {',
-                    'vAngle = -atan(pos.y, pos.x);',
+                    'vAngle = -atan(pos.y - position.y, pos.x - position.x);',
                 '}',
                 'else {',
                     'vAngle = angle + ( angularVelocity * age );',
