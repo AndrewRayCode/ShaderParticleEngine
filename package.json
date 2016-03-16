@@ -1,5 +1,5 @@
 {
-    "name": "shader-particle-engine",
+    "name": "shader-particle-engine-hotfix",
     "description": "A GLSL-focused particle engine for THREE.js.",
     "version": "1.0.3",
     "author": "Luke Moody (https://github.com/squarefeet/)",
