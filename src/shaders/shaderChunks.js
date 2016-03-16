@@ -249,8 +249,10 @@ var shaderChunks = {
         '        vUv.y = 1.0 - (gl_PointCoord.y * framesY + rowNorm);',
         '    #endif',
 
-        '',
-        '    vec4 rotatedTexture = texture2D( texture, vUv );',
+        '    vec4 rotatedTexture = vec4( 1.0 );',
+        '    #ifdef USE_TEXTURE',
+        '        rotatedTexture = texture2D( texture, vUv );',
+        '    #endif'
     ].join( '\n' )
 };
 

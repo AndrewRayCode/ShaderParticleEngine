@@ -178,7 +178,9 @@ function Group( options ) {
         SHOULD_ROTATE_PARTICLES: false,
         SHOULD_WIGGLE_PARTICLES: false,
 
-        SHOULD_CALCULATE_SPRITE: this.textureFrames.x > 1 || this.textureFrames.y > 1
+        SHOULD_CALCULATE_SPRITE: this.textureFrames.x > 1 || this.textureFrames.y > 1,
+
+        USE_TEXTURE: !!this.texture
     };
 
     // Map of all attributes to be applied to the particles.
@@ -258,6 +260,8 @@ Group.prototype._updateDefines = function() {
             emitter.wiggle.value,
             emitter.wiggle.spread
         );
+
+        defines.USE_TEXTURE = !!this.texture;
     }
 
     this.material.needsUpdate = true;
